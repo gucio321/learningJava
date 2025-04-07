@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -51,5 +53,36 @@ public class Main {
         System.out.println("java".equalsIgnoreCase("JAVA")); // true
         System.out.println("abc".compareTo("abc"));
         System.out.println("abc".compareTo("bbc")); // abc < bbc => <0
+
+        // [INPUT]
+        // java.utils.Scanner
+        // you need scanner like.. reader in go?
+        // System.in = os.Stdin
+        var kb = new Scanner(System.in);
+        System.out.print("Dawaj hajsy: ");
+        // wrzuca linijke z doublem do bufora
+        var hajsy = kb.nextDouble();
+
+        // czyści \n z bufora
+        kb.nextLine(); // need this because without, it probably takes \n as input
+
+        // robi kolejną linijkę
+        System.out.print("Twoje imie?: ");
+        var name = kb.nextLine();
+
+        System.out.println("Dasz mi " + hajsy + " " + name);
+        // [Switch-Case]
+        switch (5) {
+            case 8:
+                System.out.println("never exec");
+            case 5:
+                System.out.println("call!");
+                break;
+            case 2:
+                System.out.println("Should nnot be called");
+                break;
+            default:
+                System.out.println("default");
+        }
     }
 }
